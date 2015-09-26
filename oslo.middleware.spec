@@ -4,12 +4,13 @@
 #
 Name     : oslo.middleware
 Version  : 2.8.0
-Release  : 17
+Release  : 18
 URL      : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-2.8.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-2.8.0.tar.gz
 Summary  : Oslo Middleware library
 Group    : Development/Tools
 License  : Apache-2.0
+Requires: oslo.middleware-python
 BuildRequires : Babel-python
 BuildRequires : Jinja2
 BuildRequires : Pygments
@@ -22,6 +23,7 @@ BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
+BuildRequires : funcsigs-python
 BuildRequires : hacking
 BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
@@ -65,6 +67,14 @@ BuildRequires : virtualenv
 oslo.middleware
 ===================================
 
+%package python
+Summary: python components for the oslo.middleware package.
+Group: Default
+
+%description python
+python components for the oslo.middleware package.
+
+
 %prep
 %setup -q -n oslo.middleware-2.8.0
 
@@ -84,3 +94,7 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
+
+%files python
+%defattr(-,root,root,-)
+/usr/lib/python*/*
