@@ -4,7 +4,7 @@
 #
 Name     : oslo.middleware
 Version  : 2.8.0
-Release  : 18
+Release  : 19
 URL      : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-2.8.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-2.8.0.tar.gz
 Summary  : Oslo Middleware library
@@ -70,6 +70,11 @@ oslo.middleware
 %package python
 Summary: python components for the oslo.middleware package.
 Group: Default
+Requires: Babel-python
+Requires: WebOb-python
+Requires: oslo.context-python
+Requires: oslo.i18n-python
+Requires: six-python
 
 %description python
 python components for the oslo.middleware package.
