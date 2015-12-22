@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+3.4.0
+-----
+
+* Updated from global requirements
+
 3.3.0
 -----
 
@@ -11,6 +16,7 @@ CHANGES
 -----
 
 * Re-Add oslo.middleware namespace for backward compat
+* Removes MANIFEST.in as it is not needed explicitely by PBR
 
 3.1.0
 -----
