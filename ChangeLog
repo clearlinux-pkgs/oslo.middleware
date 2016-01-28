@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+3.5.0
+-----
+
+* Remove old references to namespace packages
+* Updated from global requirements
+* Change LOG.warn to LOG.warning
+* Fix the url in the CONTRIBUTING.rst
+* Python 3 deprecated the logger.warn method in favor of warning
+* assertIsNone(val) instead of assertEqual(None,val)
+
 3.4.0
 -----
 
