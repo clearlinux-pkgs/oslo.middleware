@@ -1,10 +1,22 @@
 CHANGES
 =======
 
+3.6.0
+-----
+
+* Update translation setup
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Remove ordereddict from requirements.txt
+* Updated from global requirements
+
 3.5.0
 -----
 
 * Remove old references to namespace packages
+* test: pass enforce_type=True when using CONF.set_override
 * Updated from global requirements
 * Change LOG.warn to LOG.warning
 * Fix the url in the CONTRIBUTING.rst
