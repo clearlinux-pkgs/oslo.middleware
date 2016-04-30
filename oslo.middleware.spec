@@ -4,7 +4,7 @@
 #
 Name     : oslo.middleware
 Version  : 3.8.0
-Release  : 33
+Release  : 34
 URL      : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.8.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.8.0.tar.gz
 Summary  : Oslo Middleware library
@@ -16,6 +16,7 @@ BuildRequires : Sphinx-python
 BuildRequires : WebOb-python
 BuildRequires : coverage-python
 BuildRequires : debtcollector-python
+BuildRequires : docutils
 BuildRequires : hacking
 BuildRequires : iso8601-python
 BuildRequires : netaddr
