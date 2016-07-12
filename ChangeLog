@@ -1,16 +1,64 @@
 CHANGES
 =======
 
-3.8.0
------
+3.14.0
+------
 
 * Updated from global requirements
-* Update .gitreview for stable/mitaka
+
+3.13.0
+------
+
+* Fix spelling of config option help
+* Expose sample config opts for http-proxy-to-wsgi
+
+3.12.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Do not add a default content type when replying
+
+3.11.0
+------
+
+* cors: remove unused import
+* Updated from global requirements
+* Add a simple __main__ to easily show healthcheck output
+
+3.10.0
+------
+
+* Removed simple headers from documentation examples
+* Added PATCH method to default config
+* Added set_defaults method to oslo_middleware.cors
+* Set default allow methods to those defined in RFC 2616
+* Removed default headers from CORS_OPTS
+
+3.9.0
+-----
+
+* Imported Translations from Zanata
+* Updated from global requirements
+* Remove direct dependency on babel
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* cors: prevent WebOb setting a default Content-Type
+* CORS Middleware now honors upstream Vary header
+* Disable http_proxy_to_wsgi middleware by default
+* CORS tests now use a transient configuration
+* Updated config documentation for cors_middleware
+* Updated from global requirements
+* Updated from global requirements
+* Revert "work around doc build error"
 
 3.7.0
 -----
 
 * work around doc build error
+* Clean up removed hacking rule from [flake8] ignore lists
 
 3.6.0
 -----
@@ -289,7 +337,7 @@ CHANGES
 * Fixed syntax of the HACKING.rst file
 * Enable hacking check H305
 * Cleaning up index.rst file
-* replace with oslo.i18n
+* replace  with oslo.i18n
 * remove stray tests
 * initial oslo.middleware checkin
 * exported from oslo-incubator by graduate.sh
