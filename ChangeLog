@@ -1,10 +1,30 @@
 CHANGES
 =======
 
+3.19.0
+------
+
+* Remove pot files
+* Fix inline docstring to use default path (not /status)
+* Updated from global requirements
+
+3.18.0
+------
+
+* Updated from global requirements
+* Fixed typo in SSL
+
+3.17.0
+------
+
+* Updated from global requirements
+* Replace deprecated LOG.warn with LOG.warning
+
 3.16.0
 ------
 
 * Updated from global requirements
+* Fix parameters of assertEqual are misplaced
 * Updated from global requirements
 * Fix unit tests on Windows
 
