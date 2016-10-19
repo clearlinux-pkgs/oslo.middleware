@@ -1,9 +1,20 @@
 CHANGES
 =======
 
+3.20.0
+------
+
+* Limit ssl deprecation warning to external importers
+* Changed the home-page link
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* make sure we handle the forwarded for headers
+
 3.19.0
 ------
 
+* Show more healthcheck examples
 * Remove pot files
 * Fix inline docstring to use default path (not /status)
 * Updated from global requirements
@@ -33,6 +44,7 @@ CHANGES
 
 * Updated from global requirements
 * Updated from global requirements
+* Add reno for release notes management
 * Updated from global requirements
 
 3.14.0
@@ -61,6 +73,7 @@ CHANGES
 * Add a simple __main__ to easily show healthcheck output
 * Deprecate using String as valid value for allowed_origin
 * Deprecate multiple config block parsing
+* Deprecated set_latent
 
 3.10.0
 ------
