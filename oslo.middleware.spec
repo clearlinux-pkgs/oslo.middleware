@@ -4,7 +4,7 @@
 #
 Name     : oslo.middleware
 Version  : 3.20.0
-Release  : 41
+Release  : 42
 URL      : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.20.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.20.0.tar.gz
 Summary  : Oslo Middleware library
