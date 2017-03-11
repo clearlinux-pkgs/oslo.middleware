@@ -6,7 +6,7 @@
 #
 Name     : oslo.middleware
 Version  : 3.20.0
-Release  : 45
+Release  : 46
 URL      : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.20.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.20.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.20.0.tar.gz.asc
@@ -24,40 +24,11 @@ Requires: oslo.utils
 Requires: pbr
 Requires: six
 Requires: stevedore
-BuildRequires : Jinja2
-BuildRequires : Sphinx-python
-BuildRequires : WebOb-python
-BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : debtcollector-python
-BuildRequires : docutils
-BuildRequires : hacking
-BuildRequires : iso8601-python
-BuildRequires : netaddr
-BuildRequires : netifaces-python
-BuildRequires : oslo.config
-BuildRequires : oslo.context-python
-BuildRequires : oslo.utils-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pyrsistent-python
-BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
-BuildRequires : python-mock-python
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : stevedore
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : tox
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
-BuildRequires : virtualenv
 
 %description
 ===================================
@@ -77,12 +48,12 @@ python components for the oslo.middleware package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489032995
+export SOURCE_DATE_EPOCH=1489273394
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489032995
+export SOURCE_DATE_EPOCH=1489273394
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
