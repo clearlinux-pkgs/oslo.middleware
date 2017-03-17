@@ -1,6 +1,53 @@
 CHANGES
 =======
 
+3.24.0
+------
+
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Updated from global requirements
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
+* Update reno for stable/ocata
+
+3.23.1
+------
+
+* Filter token data out of catch_errors middleware
+
+3.23.0
+------
+
+* remove superfluous random stuff
+* Updated from global requirements
+* Remove references to Python 3.4
+* Add new middleware to send API data to statsd
+* Add Constraints support
+* Replace six.iteritems() with .items()
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+
+3.22.0
+------
+
+* Transform healthcheck from filter to an application
+* Filter X-Auth-Token in catch_errors
+
+3.21.0
+------
+
+* Suggest to use egg based filter_factory rather than fragile full path
+* Document how to use detailed mode in healthcheck
+* Remove self-referential link in docs
+* Add Python 3.5 classifier and venv
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Allow healthcheck to be configured by oslo.config
+* Updated from global requirements
+* Replace 'assertEqual(None, ...)' with 'assertIsNone(...)'
+* TrivialFix: Remove default=None when set value in Config
+
 3.20.0
 ------
 
