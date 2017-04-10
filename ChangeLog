@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+3.25.0
+------
+
+* Remove log translations
+* Updated from global requirements
+
 3.24.0
 ------
 
