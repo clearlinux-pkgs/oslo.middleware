@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+3.26.0
+------
+
+* Updated from global requirements
+* Fix test_request_too_large_no_content_length failure
+
 3.25.0
 ------
 

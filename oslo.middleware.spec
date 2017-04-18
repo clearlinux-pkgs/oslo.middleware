@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xEB6CCA1483FA74EC (infra-root@openstack.org)
 #
 Name     : oslo.middleware
-Version  : 3.25.0
-Release  : 49
-URL      : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.25.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.25.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.25.0.tar.gz.asc
+Version  : 3.26.0
+Release  : 50
+URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.26.0.tar.gz
+Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.26.0.tar.gz
+Source99 : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.26.0.tar.gz.asc
 Summary  : Oslo Middleware library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -44,16 +44,16 @@ python components for the oslo.middleware package.
 
 
 %prep
-%setup -q -n oslo.middleware-3.25.0
+%setup -q -n oslo.middleware-3.26.0
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1491787826
+export SOURCE_DATE_EPOCH=1492528279
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1491787826
+export SOURCE_DATE_EPOCH=1492528279
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
