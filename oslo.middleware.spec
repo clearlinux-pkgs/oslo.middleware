@@ -6,7 +6,7 @@
 #
 Name     : oslo.middleware
 Version  : 3.26.0
-Release  : 50
+Release  : 51
 URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.26.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.26.0.tar.gz
 Source99 : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.26.0.tar.gz.asc
