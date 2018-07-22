@@ -1,11 +1,121 @@
 CHANGES
 =======
 
+3.36.0
+------
+
+* Switch to stestr
+* Add release notes link to README
+* fix tox python3 overrides
+* Remove stale pip-missing-reqs tox test
+* Trivial: Update pypi url to new url
+* set default python to python3
+* add lower-constraints job
+* pypy is not checked at gate
+* Updated from global requirements
+* Follow the new PTI for document build
+
+3.35.0
+------
+
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+3.34.0
+------
+
+* Avoid tox\_install.sh for constraints support
+* Updated from global requirements
+* add bandit to pep8 job
+
+3.33.0
+------
+
+* Updated from global requirements
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+
+3.32.1
+------
+
+
+3.32.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Remove Class HTTPProxyToWSGIMiddleware
+
+3.31.0
+------
+
+* Imported Translations from Zanata
+* Invalid parsing of Forwarded header fixed
+* Remove method set\_latent
+* Updated from global requirements
+* Updated from global requirements
+* Fix exception in json response under py35
+* Update reno for stable/pike
+* Updated from global requirements
+* doc: Specify openstackdocs theme
+
+3.30.0
+------
+
+* Update URLs in documents according to document migration
+
+3.29.2
+------
+
+* update the docs url in the readme
+
+3.29.1
+------
+
+* switch from oslosphinx to openstackdocstheme
+* Replace deprecated inspect function in Python 3
+* import admin guide content from openstack-manuals
+* rearrange content to fit the new standard layout
+* Remove deprecated oslo.subdomain from CORS opts
+
+3.29.0
+------
+
+* Updated from global requirements
+* Remove pbr warnerrors in favor of sphinx check
+
+3.28.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Remove usage of parameter enforce\_type
+* Updated from global requirements
+
+3.27.0
+------
+
+* Set global\_request\_id if passed in as X-OpenStack-Request-ID
+* Allow compatibility headers for request\_id
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
 3.26.0
 ------
 
 * Updated from global requirements
-* Fix test_request_too_large_no_content_length failure
+* Optimize the link address
+* Fix test\_request\_too\_large\_no\_content\_length failure
 
 3.25.0
 ------
@@ -19,13 +129,13 @@ CHANGES
 * Updated from global requirements
 * [Fix gate]Update test requirement
 * Updated from global requirements
-* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo\_xyz)
 * Update reno for stable/ocata
 
 3.23.1
 ------
 
-* Filter token data out of catch_errors middleware
+* Filter token data out of catch\_errors middleware
 
 3.23.0
 ------
@@ -36,18 +146,18 @@ CHANGES
 * Add new middleware to send API data to statsd
 * Add Constraints support
 * Replace six.iteritems() with .items()
-* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
 
 3.22.0
 ------
 
 * Transform healthcheck from filter to an application
-* Filter X-Auth-Token in catch_errors
+* Filter X-Auth-Token in catch\_errors
 
 3.21.0
 ------
 
-* Suggest to use egg based filter_factory rather than fragile full path
+* Suggest to use egg based filter\_factory rather than fragile full path
 * Document how to use detailed mode in healthcheck
 * Remove self-referential link in docs
 * Add Python 3.5 classifier and venv
@@ -129,19 +239,19 @@ CHANGES
 
 * cors: remove unused import
 * Updated from global requirements
-* Add a simple __main__ to easily show healthcheck output
-* Deprecate using String as valid value for allowed_origin
+* Add a simple \_\_main\_\_ to easily show healthcheck output
+* Deprecate using String as valid value for allowed\_origin
 * Deprecate multiple config block parsing
-* Deprecated set_latent
+* Deprecated set\_latent
 
 3.10.0
 ------
 
 * Removed simple headers from documentation examples
 * Added PATCH method to default config
-* Added set_defaults method to oslo_middleware.cors
+* Added set\_defaults method to oslo\_middleware.cors
 * Set default allow methods to those defined in RFC 2616
-* Removed default headers from CORS_OPTS
+* Removed default headers from CORS\_OPTS
 
 3.9.0
 -----
@@ -155,9 +265,9 @@ CHANGES
 * Updated from global requirements
 * cors: prevent WebOb setting a default Content-Type
 * CORS Middleware now honors upstream Vary header
-* Disable http_proxy_to_wsgi middleware by default
+* Disable http\_proxy\_to\_wsgi middleware by default
 * CORS tests now use a transient configuration
-* Updated config documentation for cors_middleware
+* Updated config documentation for cors\_middleware
 * Updated from global requirements
 * Updated from global requirements
 * Revert "work around doc build error"
@@ -183,7 +293,7 @@ CHANGES
 -----
 
 * Remove old references to namespace packages
-* test: pass enforce_type=True when using CONF.set_override
+* test: pass enforce\_type=True when using CONF.set\_override
 * Updated from global requirements
 * Change LOG.warn to LOG.warning
 * Fix the url in the CONTRIBUTING.rst
@@ -210,23 +320,23 @@ CHANGES
 3.1.0
 -----
 
-* Support Unicode request_id on Python 3
+* Support Unicode request\_id on Python 3
 * Drop python 2.6 support
 
 3.0.0
 -----
 
-* Move cors allowed_origin check into add_origin
-* Backward compat for allowed_origin
+* Move cors allowed\_origin check into add\_origin
+* Backward compat for allowed\_origin
 * Updated from global requirements
 * Updated from global requirements
 * remove bad entry point test logic
 * Remove python 2.6 classifier
 * Updated from global requirements
-* Switched StrOpt to ListOpt in CORS allowed_origins
+* Switched StrOpt to ListOpt in CORS allowed\_origins
 * Enable latent CORS configuration via pastedeploy
 * Remove python 2.6 and cleanup tox.ini
-* Add oslo_config program support to paste middleware
+* Add oslo\_config program support to paste middleware
 * Define entry points for filter factories for Paste Deployment
 
 2.11.0
@@ -254,14 +364,14 @@ CHANGES
 * Fix coverage configuration and execution
 * No need for Oslo Incubator Sync
 * Allow health check results to provide there own details
-* ssl: deprecated in favor of http_proxy_to_wsgi
+* ssl: deprecated in favor of http\_proxy\_to\_wsgi
 * Introduce HTTP Proxy to WSGI middleware
 * Imported Translations from Zanata
 * Fix string formatting
 * Fix typos in docstring
 * Include changelog/history in docs
 * Add shields.io version/downloads links/badges into README.rst
-* Change ignore-errors to ignore_errors
+* Change ignore-errors to ignore\_errors
 * Fix the home-page in setup.cfg with Oslo wiki page
 * Add plugin doco generated with stevedore.sphinxext
 * Avoid any body when request is a HEAD request
@@ -270,7 +380,7 @@ CHANGES
 * Updated from global requirements
 * Imported Translations from Zanata
 * cors: fix wildcard in actual request
-* cors: fix filter with oslo_config_project is set
+* cors: fix filter with oslo\_config\_project is set
 
 2.8.0
 -----
@@ -295,7 +405,7 @@ CHANGES
 
 * Do not dump HealthcheckResult class source
 * Updated from global requirements
-* Renamed latent_configuration to _latent_configuration
+* Renamed latent\_configuration to \_latent\_configuration
 * Added latent properties to CORS middleware
 * Declare some methods static
 * Allow to get option from paste-deploy
@@ -335,8 +445,8 @@ CHANGES
 * CORS Middleware defers to server response
 * Updated from global requirements
 * Drop use of 'oslo' namespace package
-* Use correct oslo_middleware.base methods in CORS middleware
-* Added request to parse_response
+* Use correct oslo\_middleware.base methods in CORS middleware
+* Added request to parse\_response
 * Updated from global requirements
 * Updated from global requirements
 
@@ -358,13 +468,13 @@ CHANGES
 * Remove oslo namespace package
 * Updated from global requirements
 * Advertise support for Python3.4 / Remove support for Python 3.3
-* Remove run_cross_tests.sh
+* Remove run\_cross\_tests.sh
 
 1.2.0
 -----
 
 * Imported Translations from Transifex
-* Update CORS tests to use config fixture's load_raw_values
+* Update CORS tests to use config fixture's load\_raw\_values
 * Updated from global requirements
 * Update response body when healthcheck is available
 
@@ -455,19 +565,19 @@ CHANGES
 * Use oslotest instead of common test module
 * sizelimit: port to Python 3
 * Don't store the request ID value in middleware as class variable
-* Python 3: enable tests/unit/middleware/test_request_id.py
+* Python 3: enable tests/unit/middleware/test\_request\_id.py
 * Update oslo log messages with translation domains
 * Small edits on help strings
 * Middleware to catch all error in WSGI pipeline
-* Use hacking import_exceptions for gettextutils._
+* Use hacking import\_exceptions for gettextutils.\_
 * Middlelware to ensure request ID
 * middleware.sizelimit: stop importing wsgi
 * Use six.iteritems to make dict work on Python2/3
 * Trivial: Make vertical white space after license header consistent
 * Remove vim header
 * Remove uuidutils imports in oslo modules
-* Revert "Removes generate_uuid from uuidutils"
-* Removes generate_uuid from uuidutils
+* Revert "Removes generate\_uuid from uuidutils"
+* Removes generate\_uuid from uuidutils
 * Replace using tests.utils part1
 * Bump hacking to 0.7.0
 * middleware: code cleanup
@@ -475,7 +585,7 @@ CHANGES
 * Enable hacking H404 test
 * Move wsgi module to deprecated package
 * python3: python3 binary/text data compatbility
-* Use stubout in test_correlation_id
-* Add Middleware for correlation_id
+* Use stubout in test\_correlation\_id
+* Add Middleware for correlation\_id
 * Add middleware to limit size of HTTP requests
 * Initial skeleton project
