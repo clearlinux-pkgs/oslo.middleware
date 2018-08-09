@@ -6,7 +6,7 @@
 #
 Name     : oslo.middleware
 Version  : 3.36.0
-Release  : 53
+Release  : 54
 URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz
 Source99 : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz.asc
@@ -21,6 +21,7 @@ Requires: Sphinx
 Requires: WebOb
 Requires: debtcollector
 Requires: fixtures
+Requires: openstackdocstheme
 Requires: oslo.config
 Requires: oslo.context
 Requires: oslo.i18n
@@ -28,12 +29,10 @@ Requires: oslo.utils
 Requires: pbr
 Requires: reno
 Requires: six
+Requires: statsd
 Requires: stevedore
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 oslo.middleware
@@ -73,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532269355
+export SOURCE_DATE_EPOCH=1533789619
 python3 setup.py build -b py3
 
 %install
