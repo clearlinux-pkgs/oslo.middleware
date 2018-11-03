@@ -6,16 +6,16 @@
 #
 Name     : oslo.middleware
 Version  : 3.36.0
-Release  : 55
+Release  : 56
 URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz
 Source99 : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz.asc
 Summary  : Oslo Middleware library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: oslo.middleware-python3
-Requires: oslo.middleware-license
-Requires: oslo.middleware-python
+Requires: oslo.middleware-license = %{version}-%{release}
+Requires: oslo.middleware-python = %{version}-%{release}
+Requires: oslo.middleware-python3 = %{version}-%{release}
 Requires: Jinja2
 Requires: Sphinx
 Requires: WebOb
@@ -49,7 +49,7 @@ license components for the oslo.middleware package.
 %package python
 Summary: python components for the oslo.middleware package.
 Group: Default
-Requires: oslo.middleware-python3
+Requires: oslo.middleware-python3 = %{version}-%{release}
 
 %description python
 python components for the oslo.middleware package.
@@ -72,14 +72,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533789619
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541270783
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/oslo.middleware
-cp LICENSE %{buildroot}/usr/share/doc/oslo.middleware/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/oslo.middleware
+cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.middleware/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -88,8 +88,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/oslo.middleware/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/oslo.middleware/LICENSE
 
 %files python
 %defattr(-,root,root,-)
