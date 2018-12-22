@@ -1,5 +1,5 @@
 PKG_NAME := oslo.middleware
-URL = https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.36.0.tar.gz
+URL = https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.37.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

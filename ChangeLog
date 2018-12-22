@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+3.37.0
+------
+
+* Clean up .gitignore references to personal tools
+* Document security considerations for detailed healthcheck
+* Remove moxstubout usage
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+
 3.36.0
 ------
 
