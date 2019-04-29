@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+3.38.0
+------
+
+* OpenDev Migration Patch
+* Fix invalid escape sequence warnings
+* Do not use the deprecated best\_match() method
+* Update hacking version
+* Update master for stable/stein
+
+3.37.1
+------
+
+* add python 3.7 unit test job
+* Use template for lower-constraints
+* Update mailinglist from dev to discuss
+
 3.37.0
 ------
 
