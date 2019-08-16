@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+3.38.1
+------
+
+* More details when logging 413 Entity Too Large
+* Add Python 3 Train unit tests
+* Bump the openstackdocstheme extension to 1.20
+* Blacklist sphinx 2.1.0 (autodoc bug)
+* Cap Bandit below 1.6.0 and update Sphinx requirement
+* Replace git.openstack.org URLs with opendev.org URLs
+
 3.38.0
 ------
 
 * OpenDev Migration Patch
+* Dropping the py35 testing
 * Fix invalid escape sequence warnings
 * Do not use the deprecated best\_match() method
 * Update hacking version

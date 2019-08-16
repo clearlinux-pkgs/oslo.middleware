@@ -1,1 +1,10 @@
 # This file contains recursive sources that require this package
+barbican
+cinder
+glance
+ironic
+keystone
+neutron
+nova
+oslo.messaging
+sahara
