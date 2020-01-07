@@ -6,7 +6,7 @@
 #
 Name     : oslo.middleware
 Version  : 3.38.1
-Release  : 64
+Release  : 65
 URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.38.1.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.38.1.tar.gz
 Source1 : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-3.38.1.tar.gz.asc
