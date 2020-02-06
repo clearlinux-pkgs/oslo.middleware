@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+4.0.0
+-----
+
+* [ussuri][goal] Drop python 2.7 support and testing
+* tox: Trivial cleanup
+* tox: Keeping going with docs
+* Switch to Ussuri jobs
+* Update the constraints url
+* Update master for stable/train
+
 3.38.1
 ------
 
