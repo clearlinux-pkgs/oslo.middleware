@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+4.0.1
+-----
+
+* remove outdated header
+* Remove universal wheel configuration
+* reword releasenote for py27 support dropping
+
 4.0.0
 -----
 
