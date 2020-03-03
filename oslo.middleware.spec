@@ -6,7 +6,7 @@
 #
 Name     : oslo.middleware
 Version  : 4.0.1
-Release  : 67
+Release  : 68
 URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.1.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.1.tar.gz
 Source1  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.1.tar.gz.asc
@@ -44,9 +44,25 @@ BuildRequires : stevedore
 ===============
 oslo.middleware
 ===============
+
 .. image:: https://img.shields.io/pypi/v/oslo.middleware.svg
-:target: https://pypi.org/project/oslo.middleware/
-:alt: Latest Version
+    :target: https://pypi.org/project/oslo.middleware/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/oslo.middleware.svg
+    :target: https://pypi.org/project/oslo.middleware/
+    :alt: Downloads
+
+Oslo middleware library includes components that can be injected into
+wsgi pipelines to intercept request/response flows. The base class can be
+enhanced with functionality like add/delete/modification of http headers
+and support for limiting size/connection etc.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/oslo.middleware/latest/
+* Source: https://opendev.org/openstack/oslo.middleware
+* Bugs: https://bugs.launchpad.net/oslo.middleware
+* Release notes: https://docs.openstack.org/releasenotes/oslo.middleware/
 
 %package license
 Summary: license components for the oslo.middleware package.
@@ -69,6 +85,7 @@ python components for the oslo.middleware package.
 Summary: python3 components for the oslo.middleware package.
 Group: Default
 Requires: python3-core
+Provides: pypi(oslo.middleware)
 
 %description python3
 python3 components for the oslo.middleware package.
@@ -83,7 +100,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582741359
+export SOURCE_DATE_EPOCH=1583194373
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
