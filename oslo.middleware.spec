@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : oslo.middleware
-Version  : 4.0.1
-Release  : 68
-URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.1.tar.gz
-Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.1.tar.gz
-Source1  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.1.tar.gz.asc
+Version  : 4.0.2
+Release  : 69
+URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.2.tar.gz
+Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.2.tar.gz
+Source1  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.0.2.tar.gz.asc
 Summary  : Oslo Middleware library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -44,25 +44,9 @@ BuildRequires : stevedore
 ===============
 oslo.middleware
 ===============
-
 .. image:: https://img.shields.io/pypi/v/oslo.middleware.svg
-    :target: https://pypi.org/project/oslo.middleware/
-    :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/dm/oslo.middleware.svg
-    :target: https://pypi.org/project/oslo.middleware/
-    :alt: Downloads
-
-Oslo middleware library includes components that can be injected into
-wsgi pipelines to intercept request/response flows. The base class can be
-enhanced with functionality like add/delete/modification of http headers
-and support for limiting size/connection etc.
-
-* Free software: Apache license
-* Documentation: https://docs.openstack.org/oslo.middleware/latest/
-* Source: https://opendev.org/openstack/oslo.middleware
-* Bugs: https://bugs.launchpad.net/oslo.middleware
-* Release notes: https://docs.openstack.org/releasenotes/oslo.middleware/
+:target: https://pypi.org/project/oslo.middleware/
+:alt: Latest Version
 
 %package license
 Summary: license components for the oslo.middleware package.
@@ -86,21 +70,32 @@ Summary: python3 components for the oslo.middleware package.
 Group: Default
 Requires: python3-core
 Provides: pypi(oslo.middleware)
+Requires: pypi(six)
+Requires: pypi(debtcollector)
+Requires: pypi(oslo.utils)
+Requires: pypi(jinja2)
+Requires: pypi(oslo.config)
+Requires: pypi(statsd)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.context)
+Requires: pypi(stevedore)
+Requires: pypi(webob)
+Requires: pypi(pbr)
 
 %description python3
 python3 components for the oslo.middleware package.
 
 
 %prep
-%setup -q -n oslo.middleware-4.0.1
-cd %{_builddir}/oslo.middleware-4.0.1
+%setup -q -n oslo.middleware-4.0.2
+cd %{_builddir}/oslo.middleware-4.0.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583194373
+export SOURCE_DATE_EPOCH=1586273095
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
@@ -114,7 +109,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.middleware
-cp %{_builddir}/oslo.middleware-4.0.1/LICENSE %{buildroot}/usr/share/package-licenses/oslo.middleware/57aed0b0f74e63f6b85cce11bce29ba1710b422b
+cp %{_builddir}/oslo.middleware-4.0.2/LICENSE %{buildroot}/usr/share/package-licenses/oslo.middleware/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
