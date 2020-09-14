@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC12B8E73B30F2FC8 (infra-root@openstack.org)
 #
 Name     : oslo.middleware
-Version  : 4.1.0
-Release  : 70
-URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.0.tar.gz
-Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.0.tar.gz
-Source1  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.0.tar.gz.asc
+Version  : 4.1.1
+Release  : 71
+URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.1.tar.gz
+Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.1.tar.gz
+Source1  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.1.tar.gz.asc
 Summary  : Oslo Middleware library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -80,15 +80,15 @@ python3 components for the oslo.middleware package.
 
 
 %prep
-%setup -q -n oslo.middleware-4.1.0
-cd %{_builddir}/oslo.middleware-4.1.0
+%setup -q -n oslo.middleware-4.1.1
+cd %{_builddir}/oslo.middleware-4.1.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1591379217
+export SOURCE_DATE_EPOCH=1600109432
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -101,7 +101,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.middleware
-cp %{_builddir}/oslo.middleware-4.1.0/LICENSE %{buildroot}/usr/share/package-licenses/oslo.middleware/57aed0b0f74e63f6b85cce11bce29ba1710b422b
+cp %{_builddir}/oslo.middleware-4.1.1/LICENSE %{buildroot}/usr/share/package-licenses/oslo.middleware/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
