@@ -6,7 +6,7 @@
 #
 Name     : oslo.middleware
 Version  : 4.1.1
-Release  : 71
+Release  : 72
 URL      : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.1.tar.gz
 Source0  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.1.tar.gz
 Source1  : https://tarballs.openstack.org/oslo.middleware/oslo.middleware-4.1.1.tar.gz.asc
